@@ -4,8 +4,8 @@
 Summary: e-smith module for analysing qmail logs
 %define name e-smith-qmailanalog
 Name: %{name}
-%define version 1.10.0
-%define release 01sme01
+%define version 1.11.2
+%define release 02
 Version: %{version}
 Release: %{release}
 Copyright: GPL
@@ -14,15 +14,34 @@ Source: %{name}-%{version}.tar.gz
 Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
-Requires: e-smith-base, qmailanalog >= 0.70, daemontools >= 0.70, tai64nunix
+Requires: e-smith-base, qmailanalog >= 0.70-03, daemontools >= 0.70, tai64nunix
 Requires: e-smith-lib >= 1.13.1-08
 BuildRequires: e-smith-devtools
 AutoReqProv: no
 
 %changelog
-* Thu Jun 26 2003 Charlie Brady <charlieb@e-smith.com>
-- [1.10.0-01sme01]
-- Update requires to avoid errors
+* Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 1.11.2-02
+- Bump release number only
+
+* Fri Oct 14 2005 Gordon Rowell <gordonr@e-smith.com>
+- [1.11.2-01]
+- Remove L10Ns from base packages [SF: 1309520]
+
+* Fri Oct 14 2005 Gordon Rowell <gordonr@e-smith.com>
+- [1.11.1-01]
+- New dev stream before relocating L10Ns
+
+* Fri Sep 30 2005 Gordon Rowell <gordonr@e-smith.com>
+- [1.11.0-03]
+- Added Italian L10N - Thanks Filippo Carletti [SF: 1309266]
+
+* Mon Sep 26 2005 Gordon Rowell <gordonr@e-smith.com>
+- [1.11.0-02]
+- Added German L10N - Thanks Dietmar Berteld [SF: 1293325]
+
+* Mon Sep 26 2005 Gordon Rowell <gordonr@e-smith.com>
+- [1.11.0-01]
+- Changing version to development stream number - 1.11.0
 
 * Thu Jun 26 2003 Charlie Brady <charlieb@e-smith.com>
 - [1.10.0-01]
