@@ -4,11 +4,11 @@
 Summary: e-smith module for analysing qmail logs
 %define name e-smith-qmailanalog
 Name: %{name}
-%define version 1.11.2
-%define release 02
+%define version 1.12.0
+%define release 01
 Version: %{version}
 Release: %{release}
-Copyright: GPL
+License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
 Packager: e-smith developers <bugs@e-smith.com>
@@ -20,6 +20,9 @@ BuildRequires: e-smith-devtools
 AutoReqProv: no
 
 %changelog
+* Thu Mar 16 2006 Gordon Rowell <gordonr@gormand.com.au> 1.12.0-01
+- Roll stable stream version. [SME: 1016]
+
 * Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 1.11.2-02
 - Bump release number only
 
