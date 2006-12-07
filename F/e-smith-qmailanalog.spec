@@ -5,13 +5,13 @@ Summary: e-smith module for analysing qmail logs
 %define name e-smith-qmailanalog
 Name: %{name}
 %define version 1.12.0
-%define release 01
+%define release 2
 Version: %{version}
-Release: %{release}
+Release: %smerelease %{release}
+Packager: %{_packager}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Packager: e-smith developers <bugs@e-smith.com>
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base, qmailanalog >= 0.70-03, daemontools >= 0.70, tai64nunix
@@ -20,6 +20,10 @@ BuildRequires: e-smith-devtools
 AutoReqProv: no
 
 %changelog
+* Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
+- Update to new release naming.  No functional changes.
+- Make Packager generic
+
 * Thu Mar 16 2006 Gordon Rowell <gordonr@gormand.com.au> 1.12.0-01
 - Roll stable stream version. [SME: 1016]
 
