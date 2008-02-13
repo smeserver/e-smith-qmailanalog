@@ -5,20 +5,25 @@ Summary: e-smith module for analysing qmail logs
 %define name e-smith-qmailanalog
 Name: %{name}
 %define version 1.12.0
-%define release 2
+%define release 3
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
+Patch0: e-smith-qmailanalog-1.12.0-tags2general.patch
 BuildRoot: /var/tmp/%{name}-%{version}-%{release}-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-base, qmailanalog >= 0.70-03, daemontools >= 0.70, tai64nunix
 Requires: e-smith-lib >= 1.13.1-08
+Requires: e-smith-formmagick >= 1.4.0-9
 BuildRequires: e-smith-devtools
 AutoReqProv: no
 
 %changelog
+* Wed Feb 13 2008 Stephen Noble <support@dungog.net> 1.12.0-3
+- Remove <base> tags now in general [SME: 3921]
+
 * Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
 - Clean up spec so package can be built by koji/plague
 
@@ -217,6 +222,7 @@ choose a report.
 
 %prep
 %setup
+%patch0 -p1
 
 %build
 mkdir -p root/etc/e-smith/web/panels/manager/cgi-bin
